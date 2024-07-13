@@ -15,6 +15,8 @@ public final class AdvancedWhiteList extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         // Plugin startup logic
+        getServer().getPluginManager().registerEvents(new JoinListener(this), this);
+        getCommand("whitelist").setExecutor(new WhiteListCommand(this));
 
 
     }

@@ -3,3 +3,19 @@ version: '${version}'
 main: robot7769.advancedwhitelist.AdvancedWhiteList
 api-version: '1.20'
 author: Robot7769
+commands:
+  whitelist:
+    description: Manage the advanced whitelist
+    usages:
+        - /<command> help
+        - /<command> none
+        - /<command> all
+        - /<command> dev
+        - /<command> deti
+        - /<command> reload
+        - /<command> add <player>
+        - /<command> remove <player>
+        - /<command> list
+        - /<command> list <mode>
+    aliases: [wl, awl, advancedwhitelist, advancedwl, awhitelist]
+    permission: advancedwhitelist.whitelist
