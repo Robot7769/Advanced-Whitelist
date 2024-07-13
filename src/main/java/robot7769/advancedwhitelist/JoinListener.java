@@ -28,6 +28,9 @@ public class JoinListener implements Listener {
             event.getPlayer().kickPlayer(plugin.getConfig().getString("kick-msg"));
             return;
         }
+        if (plugin.getWhiteListMode() == WhiteListMode.ALL) {
+            return;
+        }
         List<String> playerNames = plugin.getConfig().getStringList(plugin.getWhiteListMode().getName());
         if (!playerNames.contains(playerName)) {
             event.getPlayer().kickPlayer(plugin.getConfig().getString("kick-msg"));
