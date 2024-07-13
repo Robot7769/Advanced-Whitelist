@@ -15,21 +15,21 @@ public class WhiteListCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if (strings.length == 0) {
-            commandSender.sendMessage(ChatColor.YELLOW + "Current whitelist mode: " + ChatColor.BOLD + plugin.getWhiteListMode().getName() + "/n Use /whitelist help for help");
+            commandSender.sendMessage(ChatColor.YELLOW + "Current whitelist mode: " + ChatColor.BOLD + plugin.getWhiteListMode().getName() + "\n Use /whitelist help for help");
             return true;
         }
         if (strings[0].equalsIgnoreCase("help")) {
-            commandSender.sendMessage(ChatColor.YELLOW + "Whitelist help:/n" +
-                    ChatColor.BOLD + "/whitelist help/n" + ChatColor.RESET + "Shows this message/n" +
-                    ChatColor.BOLD + "/whitelist none/n" + ChatColor.RESET + "Nobody allow/n" +
-                    ChatColor.BOLD + "/whitelist all/n" + ChatColor.RESET + "Allow all player/n" +
-                    ChatColor.BOLD + "/whitelist dev/n" + ChatColor.RESET + "Allow only dev/n" +
-                    ChatColor.BOLD + "/whitelist deti/n" + ChatColor.RESET + "Allow deti on camp/n" +
-                    ChatColor.BOLD + "/whitelist reload/n" + ChatColor.RESET + "Reload config/n" +
-                    ChatColor.BOLD + "/whitelist add <dev/deti> <player>/n" + ChatColor.RESET + "Add player to whitelist/n" +
-                    ChatColor.BOLD + "/whitelist remove <dev/deti> <player>/n" + ChatColor.RESET + "Remove player from whitelist/n" +
-                    ChatColor.BOLD + "/whitelist list/n" + ChatColor.RESET + "List all players in whitelist/n" +
-                    ChatColor.BOLD + "/whitelist list <dev/deti>/n" + ChatColor.RESET + "List all players in whitelist/n");
+            commandSender.sendMessage(ChatColor.YELLOW + "Whitelist help:\n" +
+                    ChatColor.BOLD + "/whitelist help\n" + ChatColor.RESET + "Shows this message\n" +
+                    ChatColor.BOLD + "/whitelist none\n" + ChatColor.RESET + "Nobody allow\n" +
+                    ChatColor.BOLD + "/whitelist all\n" + ChatColor.RESET + "Allow all player\n" +
+                    ChatColor.BOLD + "/whitelist dev\n" + ChatColor.RESET + "Allow only dev\n" +
+                    ChatColor.BOLD + "/whitelist deti\n" + ChatColor.RESET + "Allow deti on camp\n" +
+                    ChatColor.BOLD + "/whitelist reload\n" + ChatColor.RESET + "Reload config\n" +
+                    ChatColor.BOLD + "/whitelist add <dev/deti> <player>\n" + ChatColor.RESET + "Add player to whitelist\n" +
+                    ChatColor.BOLD + "/whitelist remove <dev/deti> <player>\n" + ChatColor.RESET + "Remove player from whitelist\n" +
+                    ChatColor.BOLD + "/whitelist list\n" + ChatColor.RESET + "List all players in whitelist\n" +
+                    ChatColor.BOLD + "/whitelist list <dev/deti>\n" + ChatColor.RESET + "List all players in whitelist\n");
             return true;
         }
         if (strings[0].equalsIgnoreCase("none")) {

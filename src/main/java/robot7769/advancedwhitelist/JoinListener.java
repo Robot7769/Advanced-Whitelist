@@ -17,6 +17,9 @@ public class JoinListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onJoin(PlayerJoinEvent event) {
+        if (plugin.getWhiteListMode() == WhiteListMode.ALL) {
+            return;
+        }
         if (event.getPlayer().isOp()) {
             return;
         }
@@ -26,9 +29,6 @@ public class JoinListener implements Listener {
         }
         if (plugin.getWhiteListMode() == WhiteListMode.NONE) {
             event.getPlayer().kickPlayer(plugin.getConfig().getString("kick-msg"));
-            return;
-        }
-        if (plugin.getWhiteListMode() == WhiteListMode.ALL) {
             return;
         }
         List<String> playerNames = plugin.getConfig().getStringList(plugin.getWhiteListMode().getName());
