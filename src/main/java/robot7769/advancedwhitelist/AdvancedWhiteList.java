@@ -4,10 +4,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class AdvancedWhiteList extends JavaPlugin {
 
-    private WhiteListMode whiteListMode;
+    private String whiteListMode;
 
-    public WhiteListMode getWhiteListMode() {
-        whiteListMode = WhiteListMode.valueOf(getConfig().getString("wl-mode"));
+    public String getWhiteListMode() {
+        whiteListMode = getConfig().getString("wl-mode");
         return whiteListMode;
     }
 
@@ -23,6 +23,8 @@ public final class AdvancedWhiteList extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        getConfig().set("wl-mode", getWhiteListMode());
+        saveConfig();
         // Plugin shutdown logic
     }
 }

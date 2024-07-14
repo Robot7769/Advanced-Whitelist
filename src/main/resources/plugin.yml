@@ -17,5 +17,6 @@ commands:
         - /<command> remove <player>
         - /<command> list
         - /<command> list <mode>
+        - /<command> mode
     aliases: [wl, awl, advancedwhitelist, advancedwl, awhitelist]
     permission: advancedwhitelist.whitelist
